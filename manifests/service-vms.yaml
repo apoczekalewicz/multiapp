@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: multiapp
+    app: multiapp-vms
   name: multiapp-vms
 spec:
   ports:
@@ -10,6 +10,6 @@ spec:
     protocol: TCP
     targetPort: 22
   selector:
-    myvmi: multiapp
+    app: multiapp-vms
   sessionAffinity: None
   type: ClusterIP

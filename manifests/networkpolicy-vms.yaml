@@ -13,8 +13,7 @@ spec:
       protocol: TCP
   podSelector:
     matchLabels:
-      app: multiapp
-      myvmi: multiapp
+      app: multiapp-vms
   policyTypes:
   - Ingress
 

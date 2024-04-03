@@ -2,25 +2,25 @@ apiVersion: pool.kubevirt.io/v1alpha1
 kind: VirtualMachinePool
 metadata:
   labels:
-    app: multiapp
+    app: multiapp-vms
   name: multiapp-vms
 spec:
   replicas: 2
   selector:
     matchLabels:
-      kubevirt.io/vmpool: multiapp
+      kubevirt.io/vmpool: multiapp-vms
   virtualMachineTemplate:
     metadata:
       labels:
-        kubevirt.io/vmpool: multiapp
+        kubevirt.io/vmpool: multiapp-vms
     spec:
       running: true
       template:
         metadata:
-          name: multiapp
+          name: multiapp-vms
           labels:
-            kubevirt.io/vmpool: multiapp
-            app: multiapp
+            kubevirt.io/vmpool: multiapp-vms
+            app: multiapp-vms
         spec:
           domain:
             devices:
